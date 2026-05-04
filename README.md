@@ -4,7 +4,7 @@ This repository contains my professional portfolio, showcasing experience across
 
 ## 🔗 Live Dashboard
 View the interactive portfolio:
-👉 https://your-link-here
+👉 https://your-link-here](https://stiekuit.github.io/romano-techops-portfolio
 
 ## 📄 Executive Portfolio (PDF)
 A structured executive summary of my experience, capabilities, and technology exposure is included in this repository.
