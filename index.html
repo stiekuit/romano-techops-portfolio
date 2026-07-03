@@ -111,7 +111,13 @@
   /* Hero illustration */
   .illustration{position:relative;height:400px;display:flex;align-items:center;justify-content:center}
   .illustration svg{width:100%;height:100%}
+  .hero-node{cursor:pointer}
+  .hero-node circle{transition:stroke .2s ease, filter .2s ease}
+  .hero-node text{transition:fill .2s ease}
+  .hero-node:hover circle, .hero-node:focus circle{stroke:#06B6D4;filter:drop-shadow(0 0 6px rgba(6,182,212,.5))}
+  .hero-node:hover text, .hero-node:focus text{fill:#F8FAFC}
   @media(max-width:960px){.illustration{height:280px;order:-1}}
+  #svc-payments, #svc-monitoring, #svc-apis, #skills{scroll-margin-top:96px}
 
   /* Stats */
   .stats-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
@@ -284,7 +290,7 @@
           <span>Transaction Junction</span><span>NET1 / EasyPay</span><span>Prism Transwitch</span>
         </div>
       </div>
-      <div class="illustration" aria-hidden="true">
+      <div class="illustration">
         <svg viewBox="0 0 480 400" xmlns="http://www.w3.org/2000/svg">
           <defs>
             <linearGradient id="g1" x1="0" y1="0" x2="1" y2="1">
@@ -307,28 +313,40 @@
           <polyline points="158,250 180,232 205,244 228,220 250,236 275,210 300,226" fill="none" stroke="#06B6D4" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
           <rect x="200" y="280" width="80" height="10" rx="5" fill="#0B1120" stroke="rgba(255,255,255,.1)"/>
           <!-- nodes -->
-          <g>
-            <circle cx="100" cy="80" r="34" fill="#111827" stroke="rgba(255,255,255,.1)"/>
-            <path d="M92 88 l8 8 16-18" stroke="#22C55E" stroke-width="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round" transform="translate(-8,-10)"/>
-            <text x="100" y="130" text-anchor="middle" font-size="11" fill="#94A3B8" font-family="Inter,sans-serif">Monitoring</text>
-          </g>
-          <g>
-            <circle cx="380" cy="70" r="34" fill="#111827" stroke="rgba(255,255,255,.1)"/>
-            <rect x="365" y="58" width="30" height="22" rx="4" fill="none" stroke="#2563EB" stroke-width="2"/>
-            <text x="380" y="120" text-anchor="middle" font-size="11" fill="#94A3B8" font-family="Inter,sans-serif">APIs</text>
-          </g>
-          <g>
-            <circle cx="90" cy="310" r="34" fill="#111827" stroke="rgba(255,255,255,.1)"/>
-            <rect x="76" y="298" width="28" height="20" rx="3" fill="none" stroke="#06B6D4" stroke-width="2"/>
-            <line x1="76" y1="305" x2="104" y2="305" stroke="#06B6D4" stroke-width="2"/>
-            <text x="90" y="360" text-anchor="middle" font-size="11" fill="#94A3B8" font-family="Inter,sans-serif">Payments</text>
-          </g>
-          <g>
-            <circle cx="390" cy="310" r="34" fill="#111827" stroke="rgba(255,255,255,.1)"/>
-            <rect x="376" y="296" width="28" height="10" rx="2" fill="none" stroke="#2563EB" stroke-width="2"/>
-            <rect x="376" y="309" width="28" height="10" rx="2" fill="none" stroke="#2563EB" stroke-width="2"/>
-            <text x="390" y="360" text-anchor="middle" font-size="11" fill="#94A3B8" font-family="Inter,sans-serif">Infrastructure</text>
-          </g>
+          <a href="#svc-monitoring" class="hero-node" aria-label="Go to Production Support & Monitoring services">
+            <title>Production Support &amp; Incident Management</title>
+            <g>
+              <circle cx="100" cy="80" r="34" fill="#111827" stroke="rgba(255,255,255,.1)"/>
+              <path d="M92 88 l8 8 16-18" stroke="#22C55E" stroke-width="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round" transform="translate(-8,-10)"/>
+              <text x="100" y="130" text-anchor="middle" font-size="11" fill="#94A3B8" font-family="Inter,sans-serif">Monitoring</text>
+            </g>
+          </a>
+          <a href="#svc-apis" class="hero-node" aria-label="Go to DevOps & API integration services">
+            <title>DevOps &amp; Delivery Support</title>
+            <g>
+              <circle cx="380" cy="70" r="34" fill="#111827" stroke="rgba(255,255,255,.1)"/>
+              <rect x="365" y="58" width="30" height="22" rx="4" fill="none" stroke="#2563EB" stroke-width="2"/>
+              <text x="380" y="120" text-anchor="middle" font-size="11" fill="#94A3B8" font-family="Inter,sans-serif">APIs</text>
+            </g>
+          </a>
+          <a href="#svc-payments" class="hero-node" aria-label="Go to Payment Systems & Reconciliation services">
+            <title>Payment Systems &amp; Reconciliation</title>
+            <g>
+              <circle cx="90" cy="310" r="34" fill="#111827" stroke="rgba(255,255,255,.1)"/>
+              <rect x="76" y="298" width="28" height="20" rx="3" fill="none" stroke="#06B6D4" stroke-width="2"/>
+              <line x1="76" y1="305" x2="104" y2="305" stroke="#06B6D4" stroke-width="2"/>
+              <text x="90" y="360" text-anchor="middle" font-size="11" fill="#94A3B8" font-family="Inter,sans-serif">Payments</text>
+            </g>
+          </a>
+          <a href="#skills" class="hero-node" aria-label="Go to technical skills & infrastructure tools">
+            <title>Technologies &amp; Tools</title>
+            <g>
+              <circle cx="390" cy="310" r="34" fill="#111827" stroke="rgba(255,255,255,.1)"/>
+              <rect x="376" y="296" width="28" height="10" rx="2" fill="none" stroke="#2563EB" stroke-width="2"/>
+              <rect x="376" y="309" width="28" height="10" rx="2" fill="none" stroke="#2563EB" stroke-width="2"/>
+              <text x="390" y="360" text-anchor="middle" font-size="11" fill="#94A3B8" font-family="Inter,sans-serif">Infrastructure</text>
+            </g>
+          </a>
         </svg>
       </div>
     </div>
@@ -372,7 +390,7 @@
       </div>
       <div class="services-grid reveal">
 
-        <div class="service-card">
+        <div class="service-card" id="svc-payments">
           <div class="service-icon" style="background:rgba(37,99,235,.15);color:#2563EB"><i data-lucide="credit-card"></i></div>
           <h3>Payment Systems &amp; Reconciliation</h3>
           <p>Design and operate daily reconciliation processes across payment platforms, so nothing slips through unmatched.</p>
@@ -380,7 +398,7 @@
           <div class="tag-row"><span class="tag">Postilion</span><span class="tag">eSocket.pos</span><span class="tag">Reconciliation</span></div>
         </div>
 
-        <div class="service-card">
+        <div class="service-card" id="svc-monitoring">
           <div class="service-icon" style="background:rgba(6,182,212,.15);color:#06B6D4"><i data-lucide="shield-check"></i></div>
           <h3>Production Support &amp; Incident Management</h3>
           <p>24/7 investigation and resolution of live payment and platform issues before they impact customers.</p>
@@ -404,7 +422,7 @@
           <div class="tag-row"><span class="tag">MS SQL Server</span><span class="tag">MySQL</span><span class="tag">Azure KQL</span></div>
         </div>
 
-        <div class="service-card">
+        <div class="service-card" id="svc-apis">
           <div class="service-icon" style="background:rgba(6,182,212,.15);color:#06B6D4"><i data-lucide="git-branch"></i></div>
           <h3>DevOps &amp; Delivery Support</h3>
           <p>Support for Agile delivery, API testing and deployment coordination that keeps releases predictable.</p>
@@ -526,7 +544,7 @@
           <div class="t-year">2003 – 2005</div>
           <div class="t-role">Lead Reconciliation Clerk / Call Centre Technician</div>
           <div class="t-company">Prism Transwitch · Electronic Payments &amp; Transaction Switching</div>
-          <div class="t-desc">Pioneered the reconciliation function and co-founded the call centre from inception, training all incoming staff.</div>
+          <div class="t-desc">Set up the reconciliation function as sole recon clerk, handling transaction tracking and dispute resolution. Assisted with training, documentation, mentorship and onboarding of new starts to the call centre.</div>
         </div></div>
       </div>
     </div>
