@@ -182,6 +182,18 @@
   .links{display:flex;flex-wrap:wrap;gap:10px;}
   .link-btn{display:inline-flex;align-items:center;gap:6px;background:var(--accent-soft);color:var(--accent);text-decoration:none;font-size:13px;font-weight:600;padding:8px 14px;border-radius:8px;}
   .link-btn:hover{background:#123249;}
+
+  /* Grafana gallery */
+  .gf-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-top:4px;}
+  @media(max-width:560px){.gf-grid{grid-template-columns:1fr;}}
+  .gf-tile{background:#000;border:1px solid var(--card-border);border-radius:10px;overflow:hidden;cursor:pointer;}
+  .gf-tile img{display:block;width:100%;height:130px;object-fit:cover;object-position:top;transition:opacity .15s;}
+  .gf-tile:hover img{opacity:.85;}
+  .gf-tile .gf-cap{padding:8px 10px;font-size:11.5px;color:var(--text-dim);line-height:1.4;}
+  .gf-lb{position:fixed;inset:0;background:rgba(4,8,16,.9);display:none;align-items:center;justify-content:center;z-index:300;}
+  .gf-lb.open{display:flex;}
+  .gf-lb img{max-width:90vw;max-height:88vh;border-radius:10px;}
+  .gf-lb-close{position:fixed;top:20px;right:24px;background:var(--card);border:1px solid var(--card-border);color:var(--text-dim);width:34px;height:34px;border-radius:8px;cursor:pointer;font-size:18px;}
 </style>
 </head>
 <body>
@@ -589,6 +601,37 @@
       </div>
 
       <div class="m-section">
+        <h4>Grafana Monitoring</h4>
+        <p style="margin-bottom:12px;">Four dashboard folders cover analytics accuracy, backend operations, Fly.io infrastructure and a support runbook — all reading from the same API and Prometheus endpoint.</p>
+        <div class="gf-grid">
+          <div class="gf-tile" onclick="openLb('images/grafana-dashboards-list.png')">
+            <img src="images/grafana-dashboards-list.png" alt="Grafana dashboard list — BallChecker folder">
+            <div class="gf-cap">Dashboard overview — Analytics, Backend Ops, Fly Infrastructure &amp; Support Runbook</div>
+          </div>
+          <div class="gf-tile" onclick="openLb('images/grafana-system-health.png')">
+            <img src="images/grafana-system-health.png" alt="BallChecker Analytics — system health and strategy accuracy">
+            <div class="gf-cap">System health tiles and prediction-strategy accuracy per game</div>
+          </div>
+          <div class="gf-tile" onclick="openLb('images/grafana-overdue-analysis.png')">
+            <img src="images/grafana-overdue-analysis.png" alt="Overdue ball analysis gauges">
+            <div class="gf-cap">Overdue-ball hit-rate gauges and what the model is watching right now</div>
+          </div>
+          <div class="gf-tile" onclick="openLb('images/grafana-ball-intelligence.png')">
+            <img src="images/grafana-ball-intelligence.png" alt="Ball rankings and recent verified predictions">
+            <div class="gf-cap">Full ball rankings by model confidence, verified against recent draws</div>
+          </div>
+          <div class="gf-tile" onclick="openLb('images/grafana-backend-ops.png')">
+            <img src="images/grafana-backend-ops.png" alt="Backend operations — fetcher and database coverage">
+            <div class="gf-cap">Fetcher status, data version and per-game draw coverage</div>
+          </div>
+          <div class="gf-tile" onclick="openLb('images/grafana-instance-health.png')">
+            <img src="images/grafana-instance-health.png" alt="Instance health — uptime, memory and CPU">
+            <div class="gf-cap">Instance uptime, memory timeline and CPU tracked in real time</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="m-section">
         <h4>Known issues</h4>
         <div class="known-issue"><span class="sev sev-high">High</span><span>Deep link from notifications doesn't persist game context across route changes.</span></div>
         <div class="known-issue"><span class="sev sev-medium">Medium</span><span>Offline mode shows stale predictions without an error indicator.</span></div>
@@ -606,6 +649,11 @@
   </div>
 </div>
 
+<div class="gf-lb" id="gfLb" onclick="closeLb()">
+  <button class="gf-lb-close" onclick="event.stopPropagation();closeLb()">&#10005;</button>
+  <img id="gfLbImg" src="" alt="">
+</div>
+
 <script>
   function wireCard(cardId, overlayId, closeBtnId){
     const card = document.getElementById(cardId);
@@ -621,6 +669,10 @@
   }
   wireCard('ballcheckerCard', 'overlay', 'closeBtn');
   wireCard('toolkitCard', 'overlay2', 'closeBtn2');
+
+  function openLb(src){ document.getElementById('gfLbImg').src=src; document.getElementById('gfLb').classList.add('open'); document.body.style.overflow='hidden'; }
+  function closeLb(){ document.getElementById('gfLb').classList.remove('open'); document.body.style.overflow=''; }
+  document.addEventListener('keydown', e => { if(e.key==='Escape') closeLb(); });
 
   const filterBtns = document.querySelectorAll('.filter-btn');
   const skillCards = document.querySelectorAll('.skill-card');
