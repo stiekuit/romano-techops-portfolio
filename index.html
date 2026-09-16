@@ -208,6 +208,7 @@
       <a href="#home">Home</a>
       <a href="#services">Services</a>
       <a href="#projects" class="active">Projects</a>
+      <a href="#delivery">Delivery</a>
       <a href="#experience">Experience</a>
       <a href="#skills">Skills</a>
       <a href="#contact">Contact</a>
@@ -289,7 +290,7 @@
   <div class="wrap">
     <div class="kicker">Featured projects</div>
     <h2 class="sec-title">Real solutions, real impact</h2>
-    <p class="sec-lede">Selected projects that solve real operational problems and improve day-to-day efficiency. Tap BallChecker, DAE, AutoSiteLoader, or the Real-Time Market Data Platform for the full technical breakdown.</p>
+    <p class="sec-lede">Selected projects that solve real operational problems and improve day-to-day efficiency. Tap BallChecker, DAE, the Real-Time Market Data Platform, AutoSiteLoader, or P24Dashboard for the full technical breakdown.</p>
 
     <div class="grid2" style="margin-bottom:24px;">
       <div class="card clickable" id="toolkitCard" tabindex="0" role="button" aria-haspopup="dialog" aria-label="Open DAE project details">
@@ -340,7 +341,7 @@
     </div>
 
     <div class="grid2">
-      <div class="card clickable" id="autoSiteLoaderCard" style="grid-column:1 / -1;" tabindex="0" role="button" aria-haspopup="dialog" aria-label="Open AutoSiteLoader project details">
+      <div class="card clickable" id="autoSiteLoaderCard" tabindex="0" role="button" aria-haspopup="dialog" aria-label="Open AutoSiteLoader project details">
         <div class="title-row">
           <div class="icon">🔄</div>
           <span class="expand-hint">View details →</span>
@@ -350,6 +351,55 @@
         <div class="field"><div class="label">Solution</div><p class="val">Built a Playwright-driven automation tool that reads a site's terminal loadsheet and drives the same admin portal end to end: provision → issue → export → add the standard product catalog — with a dry-run mode before anything is submitted live.</p></div>
         <div class="field"><div class="label">Tech</div><p class="val">Python · Flask · Playwright · Fly.io · Grafana</p></div>
         <div class="field"><div class="label">Outcome</div><p class="val">In production use for real site rollouts, with dry-run verification and exception reporting built in before anything touches a live portal.</p></div>
+      </div>
+
+      <div class="card clickable" id="p24DashboardCard" tabindex="0" role="button" aria-haspopup="dialog" aria-label="Open P24Dashboard project details">
+        <div class="title-row">
+          <div class="icon">🖥️</div>
+          <span class="expand-hint">View details →</span>
+        </div>
+        <h3 style="margin-bottom:14px;">P24Dashboard</h3>
+        <div class="field"><div class="label">Challenge</div><p class="val">Terminal health, settlement reconciliation and support tickets across a payment terminal fleet lived in separate systems, and settlement recon was still a manual, twice-daily chore.</p></div>
+        <div class="field"><div class="label">Solution</div><p class="val">Built a Flask operations dashboard backed by a twice-daily automated pipeline that scrapes settlement exports, imports and reconciles them, and surfaces the result across 12 dashboard panels with a companion Grafana layer.</p></div>
+        <div class="field"><div class="label">Tech</div><p class="val">Python · Flask · MariaDB · Playwright · Grafana</p></div>
+        <div class="field"><div class="label">Outcome</div><p class="val">Ran in production across 3 Fly.io apps for a month before its own analytics engine was extracted into a standalone platform — DAE.</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="delivery">
+  <div class="wrap">
+    <div class="kicker">How I run delivery</div>
+    <h2 class="sec-title">Delivery &amp; reporting discipline</h2>
+    <p class="sec-lede">The same rigor behind the projects above, applied to how the work itself gets tracked, reported and shipped.</p>
+    <div class="stat-grid" style="margin-bottom:40px;">
+      <div class="stat-card"><div class="num">348</div><div class="lbl">Jira issues tracked across 2 active projects</div></div>
+      <div class="stat-card"><div class="num">195</div><div class="lbl">Merged pull requests (DAE alone)</div></div>
+      <div class="stat-card"><div class="num">476</div><div class="lbl">Commits across 3 active repos</div></div>
+      <div class="stat-card"><div class="num">80.7%</div><div class="lbl">Latest verified Jira resolution rate</div></div>
+    </div>
+    <div class="services-grid">
+      <div class="svc-card">
+        <div class="icon">📋</div>
+        <h3>Verified Jira reporting, not vibes</h3>
+        <p>A daily automated pipeline pulls status from Jira and publishes a Markdown snapshot — but every snapshot is classified as Verified, Historical (counts invalid), or Activity-backfill, never presented as more certain than the evidence supports.</p>
+        <div class="outcome">Self-caught a real pagination bug: 4 earlier reports were invalidated, not silently patched.</div>
+        <div class="pill-row"><span class="pill">Jira</span><span class="pill">Python</span><span class="pill">Automation</span></div>
+      </div>
+      <div class="svc-card">
+        <div class="icon">🔀</div>
+        <h3>PR-gated GitHub delivery</h3>
+        <p>Every change on the active platforms goes through a pull request, gated by CI — tests, linting and a dependency audit — before it merges. Nothing reaches main without the gate passing.</p>
+        <div class="outcome">195 merged PRs on DAE alone, all CI-gated.</div>
+        <div class="pill-row"><span class="pill">GitHub</span><span class="pill">CI/CD</span><span class="pill">Pull requests</span></div>
+      </div>
+      <div class="svc-card">
+        <div class="icon">🔁</div>
+        <h3>Task-tracking, in transition</h3>
+        <p>Jira has been the system of record for both active projects; a migration to YouTrack is in progress as the tracker of choice going forward.</p>
+        <div class="outcome">Migrating deliberately, not abandoning the existing history.</div>
+        <div class="pill-row"><span class="pill">Jira</span><span class="pill">YouTrack</span></div>
       </div>
     </div>
   </div>
@@ -825,6 +875,83 @@
   </div>
 </div>
 
+<div class="overlay" id="overlay5">
+  <div class="modal" role="dialog" aria-modal="true" aria-labelledby="modalTitle5">
+    <div class="modal-head">
+      <div class="modal-head-left">
+        <div class="icon" style="margin-bottom:0;">🖥️</div>
+        <div>
+          <h2 id="modalTitle5">P24Dashboard</h2>
+          <p>Payment-terminal operations dashboard · predecessor to DAE</p>
+        </div>
+      </div>
+      <button class="close-btn" id="closeBtn5" aria-label="Close">✕</button>
+    </div>
+    <div class="modal-body">
+      <div class="modal-stat-grid">
+        <div class="modal-stat"><div class="num">3</div><div class="lbl">Fly.io apps</div></div>
+        <div class="modal-stat"><div class="num">12</div><div class="lbl">Dashboard panels</div></div>
+        <div class="modal-stat"><div class="num">5</div><div class="lbl">Grafana dashboards</div></div>
+        <div class="modal-stat"><div class="num">4</div><div class="lbl">Alert rules</div></div>
+      </div>
+
+      <div class="m-section">
+        <h4>Overview</h4>
+        <p>P24Dashboard (P24 Operations Dashboard) was a day-to-day investigation and operations tool covering terminal health, bank settlement, transaction performance and support tickets across a payment terminal fleet, paired with a companion Grafana layer for real-time alerting. A twice-daily scheduled pipeline logged into the acquiring bank's portal, scraped and merged settlement exports, ran reconciliation, and wrote the result into a shared database so the dashboard and Grafana always agreed.</p>
+      </div>
+
+      <div class="m-section">
+        <h4>Stack</h4>
+        <div class="pill-row">
+          <span class="pill">Python</span>
+          <span class="pill">Flask</span>
+          <span class="pill">MariaDB</span>
+          <span class="pill">Playwright</span>
+          <span class="pill">pandas</span>
+          <span class="pill">Chart.js</span>
+          <span class="pill">SheetJS</span>
+          <span class="pill">Grafana</span>
+          <span class="pill">Docker</span>
+          <span class="pill">Fly.io</span>
+        </div>
+      </div>
+
+      <div class="m-section">
+        <h4>Twice-daily recon pipeline</h4>
+        <p>A scheduled pipeline ran at 07:00 and 12:00 SAST: Playwright scraped the acquirer's settlement export, imported it, and ran a 14-strategy waterfall matching engine against bank markoff files — resolving every transaction to a Strong Match, Partial Match, or Unmatched using identifiers like transaction ID, RRN, amount, TID, MID and card BIN/last-4. Amount and date alone was never treated as sufficient; at least one hard identifier had to line up before a match was accepted.</p>
+      </div>
+
+      <div class="m-section">
+        <h4>Panels covered</h4>
+        <div class="pill-row">
+          <span class="pill">Dashboard</span>
+          <span class="pill">Batching</span>
+          <span class="pill">Settlement</span>
+          <span class="pill">Diagnostics</span>
+          <span class="pill">Recon</span>
+          <span class="pill">Transactions</span>
+          <span class="pill">Tickets</span>
+          <span class="pill">Terminals</span>
+          <span class="pill">Registry</span>
+          <span class="pill">All Sites</span>
+          <span class="pill">Alerts</span>
+          <span class="pill">Settings</span>
+        </div>
+      </div>
+
+      <div class="m-section">
+        <h4>Companion layer</h4>
+        <p>Five Grafana dashboards (fleet overview, per-terminal drill-down, settlement, alerts &amp; thresholds, and pipeline health) sat alongside the custom dashboard, backed by 4 alert rules — including one watching for the pipeline itself going quiet for over 13 hours, catching a broken pipeline before anyone noticed stale data. A separate real-time ingestion path also streamed live Bitcoin blockchain events over WebSocket into the same platform.</p>
+      </div>
+
+      <div class="m-section" style="margin-bottom:0;">
+        <h4>What it became</h4>
+        <p>Its analytics-engine module was later extracted into its own standalone platform — see the DAE project card above — which now carries that governed-ingestion work forward independently.</p>
+      </div>
+    </div>
+  </div>
+</div>
+
 <div class="gf-lb" id="gfLb" onclick="closeLb()">
   <button class="gf-lb-close" onclick="event.stopPropagation();closeLb()">✕</button>
   <img id="gfLbImg" src="" alt="">
@@ -847,6 +974,7 @@
   wireCard('toolkitCard', 'overlay2', 'closeBtn2');
   wireCard('marketDataCard', 'overlay3', 'closeBtn3');
   wireCard('autoSiteLoaderCard', 'overlay4', 'closeBtn4');
+  wireCard('p24DashboardCard', 'overlay5', 'closeBtn5');
 
   function openLb(src){ document.getElementById('gfLbImg').src=src; document.getElementById('gfLb').classList.add('open'); document.body.style.overflow='hidden'; }
   function closeLb(){ document.getElementById('gfLb').classList.remove('open'); document.body.style.overflow=''; }
