@@ -301,7 +301,7 @@
         <h3 style="margin-bottom:14px;">DAE</h3>
         <div class="field"><div class="label">Challenge</div><p class="val">Payment-terminal data arrived from a portal, raw device logs and controller archives — each shaped differently, with no single place to reconcile them into a trustworthy report.</p></div>
         <div class="field"><div class="label">Solution</div><p class="val">Built DAE, a multi-page analytics workspace that ingests transaction exports, device-log archives and controller logs through one pipeline and turns them into validated, defensible findings and reports.</p></div>
-        <div class="field"><div class="label">Tech</div><p class="val">Python · Flask · MySQL · Grafana</p></div>
+        <div class="field"><div class="label">Tech</div><p class="val">Python · Flask · MySQL · AWS · Grafana</p></div>
         <div class="field"><div class="label">Outcome</div><p class="val">Closed its first delivery stage on a real cross-machine production run — turning ad hoc investigation into a governed, repeatable workflow.</p></div>
       </div>
 
@@ -547,7 +547,10 @@
           <span class="pill">Flask</span>
           <span class="pill">Playwright</span>
           <span class="pill">MySQL</span>
-          <span class="pill">S3-compatible storage</span>
+          <span class="pill">AWS EC2</span>
+          <span class="pill">AWS RDS</span>
+          <span class="pill">AWS S3</span>
+          <span class="pill">Terraform</span>
           <span class="pill">Chart.js</span>
           <span class="pill">Grafana</span>
         </div>
@@ -589,6 +592,11 @@
       <div class="m-section">
         <h4>Companion layer</h4>
         <p>Six Grafana dashboards — overview, drill-down, processing overview, error investigation, session trace, and application support — read the same MySQL database directly, with no separate export/ETL step.</p>
+      </div>
+
+      <div class="m-section">
+        <h4>Infrastructure</h4>
+        <p>Migrated off Fly.io onto a free-tier-optimized AWS stack: a single EC2 instance runs the app and worker containers, RDS (MySQL) is the production database, S3 holds application artifacts and database backups, and SSM Parameter Store manages secrets and config — all provisioned through Terraform, with remote state locked in S3 and DynamoDB.</p>
       </div>
 
       <div class="m-section">
