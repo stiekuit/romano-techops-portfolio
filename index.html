@@ -289,19 +289,19 @@
   <div class="wrap">
     <div class="kicker">Featured projects</div>
     <h2 class="sec-title">Real solutions, real impact</h2>
-    <p class="sec-lede">Selected projects that solve real operational problems and improve day-to-day efficiency. Tap BallChecker, the Payment Investigation Toolkit, or the Real-Time Market Data Platform for the full technical breakdown.</p>
+    <p class="sec-lede">Selected projects that solve real operational problems and improve day-to-day efficiency. Tap BallChecker, DAE, AutoSiteLoader, or the Real-Time Market Data Platform for the full technical breakdown.</p>
 
     <div class="grid2" style="margin-bottom:24px;">
-      <div class="card clickable" id="toolkitCard" tabindex="0" role="button" aria-haspopup="dialog" aria-label="Open Payment Investigation Toolkit project details">
+      <div class="card clickable" id="toolkitCard" tabindex="0" role="button" aria-haspopup="dialog" aria-label="Open DAE project details">
         <div class="title-row">
-          <div class="icon">🔍</div>
+          <div class="icon">🗂️</div>
           <span class="expand-hint">View details →</span>
         </div>
-        <h3 style="margin-bottom:14px;">Payment Investigation Toolkit</h3>
-        <div class="field"><div class="label">Challenge</div><p class="val">Investigating transaction discrepancies across systems was slow and manual.</p></div>
-        <div class="field"><div class="label">Solution</div><p class="val">Built an automated toolkit to correlate data across sources and surface discrepancies faster.</p></div>
-        <div class="field"><div class="label">Tech</div><p class="val">Python · Playwright · MariaDB · Grafana</p></div>
-        <div class="field"><div class="label">Outcome</div><p class="val">Reduced analysis time and improved accuracy of investigations.</p></div>
+        <h3 style="margin-bottom:14px;">DAE</h3>
+        <div class="field"><div class="label">Challenge</div><p class="val">Payment-terminal data arrived from a portal, raw device logs and controller archives — each shaped differently, with no single place to reconcile them into a trustworthy report.</p></div>
+        <div class="field"><div class="label">Solution</div><p class="val">Built DAE, a multi-page analytics workspace that ingests transaction exports, device-log archives and controller logs through one pipeline and turns them into validated, defensible findings and reports.</p></div>
+        <div class="field"><div class="label">Tech</div><p class="val">Python · Flask · MySQL · Grafana</p></div>
+        <div class="field"><div class="label">Outcome</div><p class="val">Closed its first delivery stage on a real cross-machine production run — turning ad hoc investigation into a governed, repeatable workflow.</p></div>
       </div>
 
       <div class="card clickable" id="ballcheckerCard" tabindex="0" role="button" aria-haspopup="dialog" aria-label="Open BallChecker project details">
@@ -317,7 +317,7 @@
       </div>
     </div>
 
-    <div class="grid2">
+    <div class="grid2" style="margin-bottom:24px;">
       <div class="card clickable" id="marketDataCard" tabindex="0" role="button" aria-haspopup="dialog" aria-label="Open Real-Time Market Data Platform project details">
         <div class="title-row">
           <div class="icon">📡</div>
@@ -336,6 +336,20 @@
         <div class="field"><div class="label">Solution</div><p class="val">Built a library of PowerShell and Python scripts to automate day-to-day operational tasks.</p></div>
         <div class="field"><div class="label">Tech</div><p class="val">PowerShell · Python · Tooling</p></div>
         <div class="field"><div class="label">Outcome</div><p class="val">Freed up hours previously spent on repetitive manual work.</p></div>
+      </div>
+    </div>
+
+    <div class="grid2">
+      <div class="card clickable" id="autoSiteLoaderCard" style="grid-column:1 / -1;" tabindex="0" role="button" aria-haspopup="dialog" aria-label="Open AutoSiteLoader project details">
+        <div class="title-row">
+          <div class="icon">🔄</div>
+          <span class="expand-hint">View details →</span>
+        </div>
+        <h3 style="margin-bottom:14px;">AutoSiteLoader</h3>
+        <div class="field"><div class="label">Challenge</div><p class="val">Provisioning terminals for a new merchant site — creating each device, issuing it, exporting the result, then adding a full product catalog — was done by hand in an admin portal, one click at a time, one site at a time.</p></div>
+        <div class="field"><div class="label">Solution</div><p class="val">Built a Playwright-driven automation tool that reads a site's terminal loadsheet and drives the same admin portal end to end: provision → issue → export → add the standard product catalog — with a dry-run mode before anything is submitted live.</p></div>
+        <div class="field"><div class="label">Tech</div><p class="val">Python · Flask · Playwright · Fly.io · Grafana</p></div>
+        <div class="field"><div class="label">Outcome</div><p class="val">In production use for real site rollouts, with dry-run verification and exception reporting built in before anything touches a live portal.</p></div>
       </div>
     </div>
   </div>
@@ -412,7 +426,7 @@
       <div class="skill-card" data-cat="databases"><h4>Databases &amp; query</h4><div class="pill-row"><span class="pill">MS SQL Server</span><span class="pill">MySQL (HeidiSQL)</span><span class="pill">Azure KQL</span><span class="pill">Excel</span></div></div>
       <div class="skill-card" data-cat="devops"><h4>Monitoring</h4><div class="pill-row"><span class="pill">Grafana</span><span class="pill">Kibana</span></div></div>
       <div class="skill-card" data-cat="automation"><h4>Automation</h4><div class="pill-row"><span class="pill">Power Automate</span><span class="pill">Python</span><span class="pill">PowerShell</span></div></div>
-      <div class="skill-card" data-cat="devops"><h4>DevOps &amp; delivery</h4><div class="pill-row"><span class="pill">Azure DevOps</span><span class="pill">Jira</span><span class="pill">Postman</span><span class="pill">VS Code</span></div></div>
+      <div class="skill-card" data-cat="devops"><h4>DevOps &amp; delivery</h4><div class="pill-row"><span class="pill">Azure DevOps</span><span class="pill">Jira</span><span class="pill">YouTrack</span><span class="pill">GitHub</span><span class="pill">Postman</span><span class="pill">VS Code</span></div></div>
       <div class="skill-card" data-cat="payments"><h4>Payment platforms</h4><div class="pill-row"><span class="pill">Postilion</span><span class="pill">eSocket.pos</span><span class="pill">Verifone VHQ</span><span class="pill">Traderoot TEP</span><span class="pill">Namclear</span></div></div>
       <div class="skill-card" data-cat="programming"><h4>AI-assisted development</h4><div class="pill-row"><span class="pill">Claude</span><span class="pill">ChatGPT</span></div></div>
       <div class="skill-card" data-cat="productivity"><h4>Productivity</h4><div class="pill-row"><span class="pill">Microsoft Office</span><span class="pill">SharePoint</span></div></div>
@@ -455,69 +469,60 @@
   <div class="modal" role="dialog" aria-modal="true" aria-labelledby="modalTitle2">
     <div class="modal-head">
       <div class="modal-head-left">
-        <div class="icon" style="margin-bottom:0;">🔍</div>
+        <div class="icon" style="margin-bottom:0;">🗂️</div>
         <div>
-          <h2 id="modalTitle2">Payment Investigation Toolkit</h2>
-          <p>Operations dashboard &amp; investigation suite · v1</p>
+          <h2 id="modalTitle2">DAE</h2>
+          <p>Operational analytics workspace · Stage 1</p>
         </div>
       </div>
       <button class="close-btn" id="closeBtn2" aria-label="Close">✕</button>
     </div>
     <div class="modal-body">
       <div class="modal-stat-grid">
-        <div class="modal-stat"><div class="num">12</div><div class="lbl">Dashboard panels</div></div>
-        <div class="modal-stat"><div class="num">6</div><div class="lbl">Grafana dashboards</div></div>
-        <div class="modal-stat"><div class="num">4</div><div class="lbl">Audiences served</div></div>
-        <div class="modal-stat"><div class="num">1</div><div class="lbl">Shared data pipeline</div></div>
+        <div class="modal-stat"><div class="num">3</div><div class="lbl">Data source types</div></div>
+        <div class="modal-stat"><div class="num">5</div><div class="lbl">Workspace sections</div></div>
+        <div class="modal-stat"><div class="num">3</div><div class="lbl">Analysis-workflow stages</div></div>
+        <div class="modal-stat"><div class="num">1</div><div class="lbl">Datasets library</div></div>
       </div>
 
       <div class="m-section">
         <h4>Overview</h4>
-        <p>A day-to-day investigation tool covering terminal health, bank settlement, transaction performance and support tickets across a payment terminal fleet, paired with a companion Grafana layer for real-time alerting. A scheduled Python pipeline logs into the acquiring bank's portal, scrapes and merges settlement exports, runs reconciliation, and writes the result into a shared database so the dashboard and Grafana always agree.</p>
+        <p>DAE is an operational analytics workspace for turning transaction exports, device logs and controller evidence into validated findings and decision-ready reports. A sidebar-navigated workspace (Home, Data, Insights, Logs, Config) replaces the old single-file dashboard, with a dedicated Joins → Analysis → Reports flow and a Datasets library for everything already imported.</p>
       </div>
 
       <div class="m-section">
         <h4>Stack</h4>
         <div class="pill-row">
           <span class="pill">Python</span>
+          <span class="pill">Flask</span>
           <span class="pill">Playwright</span>
-          <span class="pill">MariaDB</span>
+          <span class="pill">MySQL</span>
+          <span class="pill">S3-compatible storage</span>
           <span class="pill">Chart.js</span>
-          <span class="pill">SheetJS</span>
           <span class="pill">Grafana</span>
         </div>
       </div>
 
       <div class="m-section">
-        <h4>Reconciliation engine</h4>
-        <p>A 14-strategy waterfall matching engine reconciles the acquirer's settlement export against bank markoff files, resolving every transaction to a Strong Match, Partial Match, or Unmatched using identifiers like transaction ID, RRN, amount, TID, MID and card BIN/last-4 — amount and date alone is never treated as sufficient, so at least one hard identifier has to line up before a match is accepted.</p>
-      </div>
-
-      <div class="m-section">
-        <h4>Panels covered</h4>
+        <h4>Data sources</h4>
         <div class="pill-row">
-          <span class="pill">Dashboard</span>
-          <span class="pill">Batching</span>
-          <span class="pill">Settlement</span>
-          <span class="pill">Diagnostics</span>
-          <span class="pill">Recon</span>
-          <span class="pill">Transactions</span>
-          <span class="pill">Tickets</span>
-          <span class="pill">Terminals</span>
-          <span class="pill">Registry</span>
-          <span class="pill">All Sites</span>
-          <span class="pill">Alerts</span>
-          <span class="pill">Settings</span>
+          <span class="pill">Portal transaction exports (xlsx/xls/csv/tsv/zip)</span>
+          <span class="pill">Device logs — Verifone T650 / Newland (.tgz/.tar.gz)</span>
+          <span class="pill">Edson controller logs (.log/.txt)</span>
         </div>
       </div>
 
       <div class="m-section">
-        <h4>Built for four jobs, one tool</h4>
+        <h4>Reconciliation engine</h4>
+        <p>DAE's analysis engine runs transaction analytics and batching checks, response-code analytics, device-log investigation, connectivity analytics, decline-reason deep dives, and device-event analysis — each dataset is profiled, joined and validated before a finding is allowed into a report.</p>
+      </div>
+
+      <div class="m-section">
+        <h4>Built for defensible operational analysis</h4>
         <ul class="tight">
-          <li><strong style="color:var(--text);">Frontline support / NOC</strong> — is this site or terminal down right now, and what should be logged.</li>
-          <li><strong style="color:var(--text);">Reconciliation / finance</strong> — did the bank settle correctly, and what's still outstanding.</li>
-          <li><strong style="color:var(--text);">Ops manager</strong> — a fleet-wide scan for what's trending wrong across all sites.</li>
-          <li><strong style="color:var(--text);">Engineer / pipeline operator</strong> — is the data pipeline healthy, and is an issue a device fault or a data fault.</li>
+          <li><strong style="color:var(--text);">Deterministic analysis</strong> — numbers and findings are computed from source rows; the analytical path doesn't depend on an LLM.</li>
+          <li><strong style="color:var(--text);">Governed data</strong> — S3-compatible object storage and a MySQL backend track ownership, checksums, retention and lineage.</li>
+          <li><strong style="color:var(--text);">Durable execution</strong> — lease-based background jobs support retries, idempotency and work that survives process boundaries.</li>
         </ul>
       </div>
 
@@ -527,18 +532,23 @@
           <li>Manual cross-checks against the bank's settlement export → automatic transaction and amount-difference flags on every batch.</li>
           <li>Eyeballing timestamps to guess which terminals were settling late → automatic Daily / Irregular / Force-Batch classification.</li>
           <li>Decline-code knowledge living in one or two people's heads → five named, numbered response playbooks with clear trigger conditions.</li>
-          <li>Checking two separate support desks with no shared view → a unified ticket view that flags sites open in both systems at once.</li>
+          <li>A single-file HTML dashboard → a sidebar-navigated, multi-page workspace (Home / Data / Insights / Logs / Config) with a dedicated Datasets library.</li>
         </ul>
       </div>
 
       <div class="m-section">
         <h4>Companion layer</h4>
-        <p>Six Grafana dashboards (fleet overview, per-terminal drill-down, settlement, alerts &amp; thresholds, pilot-site comparison, and pipeline health) sit alongside the custom dashboard, reading the same database for continuous, real-time refresh and alert-rule configuration. A rule watching for the pipeline itself going quiet for over 13 hours catches a broken pipeline before anyone notices stale data.</p>
+        <p>Six Grafana dashboards — overview, drill-down, processing overview, error investigation, session trace, and application support — read the same MySQL database directly, with no separate export/ETL step.</p>
+      </div>
+
+      <div class="m-section">
+        <h4>Stage 1: Durable Jobs &amp; Governed Storage</h4>
+        <p>Four epics plus the closing gate shipped through seven merged pull requests over a total span of 10 days and 6 hours. The gate closed on a real cross-machine production upload and profile — one machine wrote an object, another profiled it successfully in production.</p>
       </div>
 
       <div class="m-section" style="margin-bottom:0;">
         <h4>What's next</h4>
-        <p>A React + Tailwind rebuild of the terminal management view is separately specced, aimed at replacing the current single-file HTML dashboard with a proper componentised frontend.</p>
+        <p>Forecasting and predictive insights are intentionally paused — Stage 1 focused on durable ingestion and governed storage; predictive capability activates once that foundation is proven.</p>
       </div>
     </div>
   </div>
@@ -754,6 +764,67 @@
   </div>
 </div>
 
+<div class="overlay" id="overlay4">
+  <div class="modal" role="dialog" aria-modal="true" aria-labelledby="modalTitle4">
+    <div class="modal-head">
+      <div class="modal-head-left">
+        <div class="icon" style="margin-bottom:0;">🔄</div>
+        <div>
+          <h2 id="modalTitle4">AutoSiteLoader</h2>
+          <p>Portal provisioning automation · solo-built · in production</p>
+        </div>
+      </div>
+      <button class="close-btn" id="closeBtn4" aria-label="Close">✕</button>
+    </div>
+    <div class="modal-body">
+      <div class="modal-stat-grid">
+        <div class="modal-stat"><div class="num">4</div><div class="lbl">Pipeline stages</div></div>
+        <div class="modal-stat"><div class="num">8</div><div class="lbl">Catalog products per site</div></div>
+        <div class="modal-stat"><div class="num">16</div><div class="lbl">Loadsheets processed</div></div>
+        <div class="modal-stat"><div class="num">13</div><div class="lbl">Python modules</div></div>
+      </div>
+
+      <div class="m-section">
+        <h4>Overview</h4>
+        <p>AutoSiteLoader automates provisioning payment terminals for a merchant site on an admin portal. An operator drops a site's terminal loadsheet in, and the tool drives the portal through Playwright to provision each terminal, issue it to the site, export the resulting terminal list, and add a standard product catalog — with a dry-run mode that exercises the whole flow without saving, and a downloadable exception report for anything that couldn't be processed.</p>
+      </div>
+
+      <div class="m-section">
+        <h4>Stack</h4>
+        <div class="pill-row">
+          <span class="pill">Python</span>
+          <span class="pill">Flask</span>
+          <span class="pill">Playwright</span>
+          <span class="pill">Fly.io</span>
+          <span class="pill">Docker</span>
+          <span class="pill">Grafana</span>
+        </div>
+      </div>
+
+      <div class="m-section">
+        <h4>Four-stage pipeline</h4>
+        <ul class="tight">
+          <li><strong style="color:var(--text);">Provision</strong> — create each terminal asset.</li>
+          <li><strong style="color:var(--text);">Issue</strong> — assign it to the merchant site.</li>
+          <li><strong style="color:var(--text);">Export</strong> — save the resulting portal records.</li>
+          <li><strong style="color:var(--text);">Add products</strong> — apply the standard catalog to every provisioned terminal.</li>
+        </ul>
+      </div>
+
+      <div class="m-section">
+        <h4>Dry run before live</h4>
+        <p>Every loadsheet can be run in Dry run mode — the full Playwright flow executes without clicking Save — before a Live submit commits anything on the real portal.</p>
+      </div>
+
+      <div class="m-section">
+        <h4>Known issues</h4>
+        <div class="known-issue"><span class="sev sev-medium">Medium</span><span>Best-effort selectors: portal markup wasn't fully known ahead of time, so autocomplete and button selectors have needed live fixes as edge cases surfaced.</span></div>
+        <div class="known-issue"><span class="sev sev-low">Low</span><span>Automated login falls back to username/password in headless/cloud runs — the interactive CAPTCHA-aware login flow needs a visible browser.</span></div>
+      </div>
+    </div>
+  </div>
+</div>
+
 <div class="gf-lb" id="gfLb" onclick="closeLb()">
   <button class="gf-lb-close" onclick="event.stopPropagation();closeLb()">✕</button>
   <img id="gfLbImg" src="" alt="">
@@ -775,6 +846,7 @@
   wireCard('ballcheckerCard', 'overlay', 'closeBtn');
   wireCard('toolkitCard', 'overlay2', 'closeBtn2');
   wireCard('marketDataCard', 'overlay3', 'closeBtn3');
+  wireCard('autoSiteLoaderCard', 'overlay4', 'closeBtn4');
 
   function openLb(src){ document.getElementById('gfLbImg').src=src; document.getElementById('gfLb').classList.add('open'); document.body.style.overflow='hidden'; }
   function closeLb(){ document.getElementById('gfLb').classList.remove('open'); document.body.style.overflow=''; }
